@@ -12,9 +12,6 @@ import {
     MenuLink
 } from './HamburgerMenu';
 import { LinkedInIcon, GithubIcon } from '../icons/icons';
-import Events from '../../pages/events';
-import App from '../../App';
-import { Routes, Route } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -30,15 +27,10 @@ return (
                 <Overlay>
                     <MenuWrapper>
                         <Menu>
-                            {/* <Routes>
-                                <Route path="/" element={<App />}>
-                                    <Route path="events" element={<Events />} />
-                                </Route>
-                            </Routes> */}
-                            <MenuItem><MenuLink href="#">Home</MenuLink></MenuItem>
-                            <MenuItem><MenuLink href="#">About Me</MenuLink></MenuItem>
-                            <MenuItem><MenuLink href="#">Projects</MenuLink></MenuItem>
-                            <MenuItem><MenuLink href="#">Contact</MenuLink></MenuItem>
+                            <MenuItem><MenuLink href="/">Home</MenuLink></MenuItem>
+                            <MenuItem><MenuLink href="/about-me">About Me</MenuLink></MenuItem>
+                            <MenuItem><MenuLink href="/projects">Projects</MenuLink></MenuItem>
+                            <MenuItem><MenuLink href="/contact">Contact</MenuLink></MenuItem>
                         </Menu>
                     </MenuWrapper>
                 </Overlay>

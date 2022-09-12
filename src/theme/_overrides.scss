@@ -1,0 +1,39 @@
+@import "../../node_modules/bootstrap/scss/functions";
+
+$enable-negative-margins: true ;	
+
+$grid-breakpoints: (
+  xxs: 0,
+  xs: 372px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1900px
+  );
+
+// scss-docs-start spacer-variables-maps
+$spacer: 1rem ;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,      // 4px
+  2: $spacer * 0.5,       // 8px
+  225: $spacer * 0.625,  // 10px
+  25: $spacer * .75,      // 12px
+  3: $spacer,             // 16px
+  35: $spacer * 1.25,     // 20px
+  4: $spacer * 1.5,       // 24px
+  45: $spacer * 2.5,      // 40px
+  5: $spacer * 3,         // 48px
+) ;
+
+
+$negative-spacers: if(
+  $enable-negative-margins,
+  negativify-map($spacers),
+  null
+) ;
+// scss-docs-end spacer-variables-maps
+
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";

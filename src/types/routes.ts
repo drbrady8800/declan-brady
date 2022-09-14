@@ -5,10 +5,3 @@ export enum RoutesEnum {
   PROJECTS = '/projects',
   SOLITAIRE = '/solitaire',
 }
-
-export interface Card {
-  number: number;
-  suit: string;
-  color: string;
-  text: string;
-}

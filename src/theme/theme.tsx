@@ -25,6 +25,13 @@ const theme = {
     xxxLarge: '4rem',
   },
 
+  fontWeight: {
+    light: 300,
+    regular: 400,
+    medium: 500,
+    bold: 700,
+  },
+
   borderRadius: {
     small: '0.2rem',
     medium: '0.4rem',

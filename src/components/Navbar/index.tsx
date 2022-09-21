@@ -36,6 +36,7 @@ const Navbar: React.FC = () => {
                   <MenuItem><MenuLink href={RoutesEnum.PROJECTS}>Projects</MenuLink></MenuItem>
                   <MenuItem><MenuLink href={RoutesEnum.CONTACT}>Contact</MenuLink></MenuItem>
                   <MenuItem><MenuLink href={RoutesEnum.SOLITAIRE}>Addiction Solitaire</MenuLink></MenuItem>
+                  <MenuItem><MenuLink href={RoutesEnum.COUNTDOWN}>Class Countdown</MenuLink></MenuItem>
                 </Menu>
               </MenuWrapper>
             </Overlay>

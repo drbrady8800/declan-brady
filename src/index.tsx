@@ -19,8 +19,7 @@ import Contact from './pages/Contact';
 
 // Types
 import { RoutesEnum } from './types';
-
-
+import ClassCountdown from './pages/ClassCountdown/ClassCountdown';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -33,6 +32,7 @@ ReactDOM.render(
           <Route path={RoutesEnum.CONTACT} element={ <Contact/> }/>
           <Route path={RoutesEnum.PROJECTS} element={ <Projects/> }/>
           <Route path={RoutesEnum.SOLITAIRE} element={ <AddictionSolitaire/> }/>
+          <Route path={RoutesEnum.COUNTDOWN} element={ <ClassCountdown/> }/>
         </Routes>
       </Router>
     </ThemeProvider>

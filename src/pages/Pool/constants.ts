@@ -9,7 +9,7 @@ export interface PoolPerson {
 export const PoolPeople: Array<PoolPerson> = [
   {
     name: "Declan",
-    winner: "Georgia",
+    winner: "Neither",
     score: 75,
     points: 20,
     gamesCorrect: 20,

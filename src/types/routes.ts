@@ -5,4 +5,5 @@ export enum RoutesEnum {
   PROJECTS = '/projects',
   SOLITAIRE = '/solitaire',
   COUNTDOWN = '/countdown',
+  POOL = '/pool',
 }

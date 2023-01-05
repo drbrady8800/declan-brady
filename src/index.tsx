@@ -16,6 +16,7 @@ import Home from './pages/Home';
 import AboutMe from './pages/AboutMe';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import Pool from './pages/Pool/Pool';
 
 // Types
 import { RoutesEnum } from './types';
@@ -33,6 +34,7 @@ ReactDOM.render(
           <Route path={RoutesEnum.PROJECTS} element={ <Projects/> }/>
           <Route path={RoutesEnum.SOLITAIRE} element={ <AddictionSolitaire/> }/>
           <Route path={RoutesEnum.COUNTDOWN} element={ <ClassCountdown/> }/>
+          <Route path={RoutesEnum.POOL} element={ <Pool/> }/>
         </Routes>
       </Router>
     </ThemeProvider>

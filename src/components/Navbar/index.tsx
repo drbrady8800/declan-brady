@@ -31,12 +31,13 @@ const Navbar: React.FC = () => {
             <Overlay className={`${isOpen ? "open" : ""}`}>
               <MenuWrapper className={`${isOpen ? "open" : ""}`}>
                 <Menu>
-                  <MenuItem><MenuLink href={RoutesEnum.HOME}>Home</MenuLink></MenuItem>
+                  {/* <MenuItem><MenuLink href={RoutesEnum.HOME}>Home</MenuLink></MenuItem>
                   <MenuItem><MenuLink href={RoutesEnum.ABOUT_ME}>About Me</MenuLink></MenuItem>
                   <MenuItem><MenuLink href={RoutesEnum.PROJECTS}>Projects</MenuLink></MenuItem>
                   <MenuItem><MenuLink href={RoutesEnum.CONTACT}>Contact</MenuLink></MenuItem>
                   <MenuItem><MenuLink href={RoutesEnum.SOLITAIRE}>Addiction Solitaire</MenuLink></MenuItem>
-                  <MenuItem><MenuLink href={RoutesEnum.COUNTDOWN}>Class Countdown</MenuLink></MenuItem>
+                  <MenuItem><MenuLink href={RoutesEnum.COUNTDOWN}>Class Countdown</MenuLink></MenuItem> */}
+                  <MenuItem><MenuLink href={RoutesEnum.POOL}>Football Pool Calculator</MenuLink></MenuItem>
                 </Menu>
               </MenuWrapper>
             </Overlay>

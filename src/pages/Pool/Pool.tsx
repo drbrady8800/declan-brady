@@ -42,7 +42,7 @@ const Pool = () => {
         <h2 className="text-center text-white">Second: {winners.secondPlace}</h2>
         <h3 className="text-center text-white">Last: {winners.lastPlace}</h3>
       </div>
-      <StyledButton className="mt-5 px-3 py-2 mx-auto"onClick={() => window.open("https://docs.google.com/spreadsheets/d/1db61oXXiECoBFEd2OK_Bayl74XR0Z_9rIxQAJQIwDR4/edit?usp=sharing", "_blank")} >See all possibilities</StyledButton>
+      <StyledButton className="mt-5 px-3 py-2 mx-auto" onClick={() => window.open("https://docs.google.com/spreadsheets/d/1db61oXXiECoBFEd2OK_Bayl74XR0Z_9rIxQAJQIwDR4/edit?usp=sharing", "_blank")} >See all possibilities</StyledButton>
     </Wrapper>
     
   );

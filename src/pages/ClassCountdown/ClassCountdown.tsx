@@ -5,7 +5,7 @@ import { startClock } from "./logic";
 import theme from "../../theme/theme";
 import { mountBodyDarkMode, unmountBodyDarkMode } from "../../utils/bodyUtlis";
 import { dateToInputWithTimezone } from "../../utils/dateUtils";
-import { ClockWrapper } from "./styles";
+import { ClockWrapper, StyledButton } from "./styles";
 
 
 const ClassCountdown: React.FC = () => {
@@ -64,8 +64,10 @@ const ClassCountdown: React.FC = () => {
           />
         </ClockWrapper>
       )}
-      <button onClick={() => setDarkMode(!darkMode)}>Toggle Dark Mode</button>
-      <form onSubmit={(e) => {
+      <div className="w-100 d-flex">
+        <StyledButton className="mt-5 px-3 py-2 mx-auto" onClick={() => setDarkMode(!darkMode)}>Toggle Dark Mode</StyledButton>
+      </div>
+      {/* <form onSubmit={(e) => {
         e.preventDefault();
         // Logic for min value
         if (clockInterval !== undefined) {
@@ -82,7 +84,7 @@ const ClassCountdown: React.FC = () => {
           }}
         />
         <input type="submit" value="Change time" />
-      </form>
+      </form> */}
     </div>
   );
 };

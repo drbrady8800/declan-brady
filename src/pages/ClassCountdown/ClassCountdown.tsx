@@ -9,7 +9,7 @@ import { ClockWrapper, StyledButton } from "./styles";
 
 
 const ClassCountdown: React.FC = () => {
-  const END_TIME = new Date("2023-01-14T20:00:00.000");
+  const END_TIME = new Date("2023-01-14T23:00:00.000");
   const useEND_TIME = true;
   // TODO: Make look nicef
   // TODO: empty state

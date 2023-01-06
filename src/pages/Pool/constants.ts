@@ -4,6 +4,7 @@ export interface PoolPerson {
   score: number;
   points: number;
   gamesCorrect: number;
+  offBy: number;
 }
 
 export const PoolPeople: Array<PoolPerson> = [
@@ -13,6 +14,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 75,
     points: 20,
     gamesCorrect: 20,
+    offBy: 100,
   },
   {
     name: "Mark K",
@@ -20,6 +22,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 52,
     points: 19,
     gamesCorrect: 19,
+    offBy: 100,
   },
   {
     name: "Mark S",
@@ -27,6 +30,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 44,
     points: 18,
     gamesCorrect: 18,
+    offBy: 100,
   },
   {
     name: "Paul",
@@ -34,6 +38,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 54,
     points: 18,
     gamesCorrect: 18,
+    offBy: 100,
   },
   {
     name: "Kelly",
@@ -41,6 +46,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 60,
     points: 18,
     gamesCorrect: 18,
+    offBy: 100,
   },
   {
     name: "Stephanie",
@@ -48,6 +54,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 63,
     points: 18,
     gamesCorrect: 18,
+    offBy: 100,
   },
   {
     name: "Maddie",
@@ -55,6 +62,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 68,
     points: 18,
     gamesCorrect: 18,
+    offBy: 100,
   },
   {
     name: "Anthony",
@@ -62,6 +70,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 65,
     points: 17,
     gamesCorrect: 17,
+    offBy: 100,
   },
   {
     name: "Ron",
@@ -69,6 +78,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 52,
     points: 17,
     gamesCorrect: 17,
+    offBy: 100,
   },
   {
     name: "Eddie",
@@ -76,6 +86,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 68,
     points: 16,
     gamesCorrect: 16,
+    offBy: 100,
   },
   {
     name: "Austin",
@@ -83,6 +94,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 57,
     points: 16,
     gamesCorrect: 16,
+    offBy: 100,
   },
   {
     name: "Leslie",
@@ -90,6 +102,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 68,
     points: 16,
     gamesCorrect: 16,
+    offBy: 100,
   },
   {
     name: "Diane",
@@ -97,6 +110,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 60,
     points: 15,
     gamesCorrect: 15,
+    offBy: 100,
   },
   {
     name: "April",
@@ -104,6 +118,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 63,
     points: 15,
     gamesCorrect: 15,
+    offBy: 100,
   },
   {
     name: "Adam",
@@ -111,6 +126,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 52,
     points: 15,
     gamesCorrect: 15,
+    offBy: 100,
   },
   {
     name: "Quinn",
@@ -118,6 +134,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 45,
     points: 15,
     gamesCorrect: 15,
+    offBy: 100,
   },
   {
     name: "David",
@@ -125,6 +142,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 50,
     points: 15,
     gamesCorrect: 15,
+    offBy: 100,
   },
   {
     name: "Drugan",
@@ -132,6 +150,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 61,
     points: 15,
     gamesCorrect: 15,
+    offBy: 100,
   },
   {
     name: "Mark L",
@@ -139,6 +158,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 37,
     points: 14,
     gamesCorrect: 14,
+    offBy: 100,
   },
   {
     name: "Henry",
@@ -146,6 +166,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 60,
     points: 14,
     gamesCorrect: 14,
+    offBy: 100,
   },
   {
     name: "Curtis",
@@ -153,6 +174,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 42,
     points: 14,
     gamesCorrect: 14,
+    offBy: 100,
   },
   {
     name: "Hannah",
@@ -160,6 +182,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 44,
     points: 13,
     gamesCorrect: 13,
+    offBy: 100,
   },
   {
     name: "Lauren",
@@ -167,6 +190,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 37,
     points: 13,
     gamesCorrect: 13,
+    offBy: 100,
   },
   {
     name: "Joan",
@@ -174,6 +198,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 27,
     points: 13,
     gamesCorrect: 13,
+    offBy: 100,
   },
   {
     name: "Brian",
@@ -181,6 +206,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 56,
     points: 13,
     gamesCorrect: 13,
+    offBy: 100,
   },
   {
     name: "Leah",
@@ -188,6 +214,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 35,
     points: 13,
     gamesCorrect: 13,
+    offBy: 100,
   },
   {
     name: "Mackenzie",
@@ -195,6 +222,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 53,
     points: 13,
     gamesCorrect: 13,
+    offBy: 100,
   },
   {
     name: "Rita",
@@ -202,6 +230,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 42,
     points: 14,
     gamesCorrect: 12,
+    offBy: 100,
   },
   {
     name: "Owen",
@@ -209,6 +238,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 65,
     points: 12,
     gamesCorrect: 12,
+    offBy: 100,
   },
   {
     name: "George",
@@ -216,6 +246,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 65,
     points: 11,
     gamesCorrect: 11,
+    offBy: 100,
   },
   {
     name: "Bob",
@@ -223,6 +254,7 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 56,
     points: 11,
     gamesCorrect: 11,
+    offBy: 100,
   },
   {
     name: "Kieran",
@@ -230,5 +262,6 @@ export const PoolPeople: Array<PoolPerson> = [
     score: 62,
     points: 11,
     gamesCorrect: 11,
+    offBy: 100,
   },
 ];

@@ -2,7 +2,7 @@ import { ClockEnum, TimeLeft } from "../../types";
 
 export const calculateTimeLeft = (endTime: Date): TimeLeft => {
   const newDate = new Date();
-  const deltaMilliseconds = (endTime.getTime() - newDate.getTime());
+  const deltaMilliseconds = Math.abs(endTime.getTime() - newDate.getTime());
   const deltaSeconds = Math.floor(deltaMilliseconds / 1000);
   return {
     hours: Math.floor(deltaSeconds / 3600),

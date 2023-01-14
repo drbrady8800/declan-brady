@@ -15,6 +15,7 @@ const ClassCountdown: React.FC = () => {
   // TODO: empty state
 
   const [clockStarted, setClockStarted] = useState<boolean>(false);
+  const [isOver, setIsOver] = useState<boolean>(false);
   // TODO: Make this context global
   const [darkMode, setDarkMode] = useState<boolean>(true);
   const [endTime, setEndTime] = useState<Date>();
@@ -42,7 +43,7 @@ const ClassCountdown: React.FC = () => {
 
   return (
     <div>
-      {(useEND_TIME || endTime !== undefined) && (
+      {(useEND_TIME || endTime !== undefined || !isOver) && (
         <ClockWrapper>
           <CountdownCircle
             animationDuration="3600s"

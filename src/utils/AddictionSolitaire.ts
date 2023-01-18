@@ -1,4 +1,4 @@
-import { Card } from "../types";
+import { Card, suits } from "../types";
 
 export const cardCanMove = (clickedCard: Card, deck: Array<Card>): number | undefined => {
   // Special case: the card is a two, must go in a first index
@@ -22,6 +22,16 @@ export const cardCanMove = (clickedCard: Card, deck: Array<Card>): number | unde
   return -1;
 }
 
+export const findCard = (num: number, suit: string, deck: Array<Card>): number => {
+  let toReturn = -1;
+  deck.forEach((card, i) => {
+    if (card.number === num && card.suit === suit) {
+      toReturn = i;
+    }
+  });
+  return toReturn;
+}
+
 export const moveCard = (clickedCard: Card, clickedIndex: number, deck: Array<Card>): Array<Card> | undefined => {
   const swapIndex = cardCanMove(clickedCard, deck);
   if (swapIndex !== -1) {
@@ -33,6 +43,23 @@ export const moveCard = (clickedCard: Card, clickedIndex: number, deck: Array<Ca
   } else {
     return undefined;
   }
+}
+
+export const nextCardIndex = (index: number, deck: Array<Card>): Array<number> | undefined => {
+  let toReturn: Array<number> = [];
+  // Blank spot is one of the twos, highlight all the twos
+  if (index === 0 || index === 13 || index === 26 || index === 39) {
+    suits.forEach((suit) => {
+      toReturn.push(findCard(2, suit, deck));
+    })
+  } else {
+    const toFind = deck[index - 1];
+    if (toFind.number === 13) {
+      return [];
+    }
+    toReturn.push(findCard(toFind.number + 1, toFind.suit, deck));
+  }
+  return toReturn;
 }
 
 export const shuffle = (deck: Array<Card>): Array<Card> => {

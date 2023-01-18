@@ -18,6 +18,15 @@ const shake = keyframes`
   }
 `;
 
+export const flash = keyframes`
+  12.5%, 37.5%, 62.5%, 87.5% {
+    box-shadow: 0px 0px 20px 0px yellow;
+  }
+  25%, 50%, 75%, 100% {
+    box-shadow: none;
+  }
+`;
+
 export const CardBody = styled.div<{column: number, row: number}>`
   grid-column: ${(props) => props.column + 1};
   grid-row: ${(props) => props.row + 1};
@@ -37,6 +46,9 @@ export const CardBody = styled.div<{column: number, row: number}>`
   }
   &.shake {
     animation: ${shake} 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  }
+  &.flash {
+    animation: ${flash} 0.75s linear;
   }
 `;
 

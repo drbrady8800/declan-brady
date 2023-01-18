@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { BlankSpace, GameWrapper } from './styles';
 import { CardComponent } from '../../../components';
 import { Card, Deck } from '../../../types';
-import { cardCanMove, checkWin, moveCard, shuffle } from '../../../utils/AddictionSolitaire';
+import { cardCanMove, checkWin, moveCard, nextCardIndex, shuffle } from '../../../utils/AddictionSolitaire';
   
 const AddictionSolitaire: React.FC = () => {
   const [cards, setCards] = useState<Array<Card>>(shuffle(Deck));
   const [won, setWon] = useState<boolean>(false);
-  const [blankHighlighted, setBlankHighlighted] = useState<boolean>(false);
+  const [blankHighlighted, setBlankHighlighted] = useState<Array<number>>([]);
   const [numShuffles, setNumShuffles] = useState<number>(0);
   const [history, setHistory] = useState<Array<Array<Card>>>([cards]);
 
@@ -22,6 +22,19 @@ const AddictionSolitaire: React.FC = () => {
       }
     }
   }
+
+  const onHighlightBlank = (card: Card) => {
+    const swapIndex = cardCanMove(card, cards);
+    setBlankHighlighted([swapIndex]);
+    setTimeout(() => setBlankHighlighted([]), 750);
+  }
+
+  const onHighlightCard = (index: number) => {
+    const nextIndexes = nextCardIndex(index, cards);
+    setBlankHighlighted(nextIndexes);
+    setTimeout(() => setBlankHighlighted([]), 750);
+  }
+
   return (
     <>
       <GameWrapper className="p-35">
@@ -29,9 +42,10 @@ const AddictionSolitaire: React.FC = () => {
           if (card.number === 1) {
             return (
               <BlankSpace
-                className={""}
+                className={blankHighlighted.find((i) => i === index) ? "flash" : ""}
                 column={index % 13}
                 key={index}
+                onClick={() => onHighlightCard(index)}
                 row={Math.floor(index / 13)}
               />
             );
@@ -39,9 +53,11 @@ const AddictionSolitaire: React.FC = () => {
             return <CardComponent
               canCardMove={cardCanMove(card, cards) !== -1}
               card={card}
+              className={blankHighlighted.find((i) => i === index) ? "flash" : ""}
               column={index % 13}
               key={index}
               onDoubleClick={() => onMoveCard(card, index)}
+              onSingleClick={() => onHighlightBlank(card)}
               row={Math.floor(index / 13)}
             />
           }

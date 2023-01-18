@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { flash } from "../../../components/Card/styles";
 
 export const BlankSpace = styled.div<{column: number, row: number}>`
   grid-column: ${(props) => props.column + 1};
@@ -7,6 +8,9 @@ export const BlankSpace = styled.div<{column: number, row: number}>`
   width: 100%;
   border: 0.5rem solid ${({theme}) => theme.colors.navy};
   border-radius: ${({theme}) => theme.borderRadius.medium};
+  &.flash {
+    animation: ${flash} 0.75s linear;
+  }
 `;
 
 export const GameWrapper = styled.div`

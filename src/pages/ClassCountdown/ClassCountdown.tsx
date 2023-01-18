@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { CountdownCircle } from "../../components";
 import { ClockEnum } from "../../types";
 import { startClock } from "./logic";
@@ -9,8 +9,7 @@ import { ClockWrapper, StyledButton } from "./styles";
 
 
 const ClassCountdown: React.FC = () => {
-  const END_TIME = new Date("2023-01-14T23:00:00.000");
-  const useEND_TIME = true;
+  const END_TIME = new Date("2023-01-18T15:15:00.000");
   // TODO: Make look nicef
   // TODO: empty state
 
@@ -19,14 +18,14 @@ const ClassCountdown: React.FC = () => {
   // TODO: Make this context global
   const [darkMode, setDarkMode] = useState<boolean>(true);
   const [endTime, setEndTime] = useState<Date>();
-  const [formTime, setFormTime] = useState<Date>();
   const [clockInterval, setClockInterval] = useState<NodeJS.Timer>();
 
-  const [minTime, setMinTime] = useState<Date>(new Date());
+  const timeRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    if (!clockStarted && (useEND_TIME || endTime !== undefined)) {
-      const interval = startClock(useEND_TIME ? END_TIME : endTime);
+    if (!clockStarted) {
+      console.log("HERE")
+      const interval = startClock(endTime || END_TIME);
       setClockInterval(interval);
       setClockStarted(true);
     }
@@ -43,7 +42,7 @@ const ClassCountdown: React.FC = () => {
 
   return (
     <div>
-      {(useEND_TIME || endTime !== undefined || !isOver) && (
+      {!isOver && (
         <ClockWrapper>
           <CountdownCircle
             animationDuration="3600s"
@@ -68,24 +67,23 @@ const ClassCountdown: React.FC = () => {
       <div className="w-100 d-flex">
         <StyledButton className="mt-5 px-3 py-2 mx-auto" onClick={() => setDarkMode(!darkMode)}>Toggle Dark Mode</StyledButton>
       </div>
-      {/* <form onSubmit={(e) => {
+      <form onSubmit={(e) => {
         e.preventDefault();
         // Logic for min value
         if (clockInterval !== undefined) {
           clearInterval(clockInterval);
         }
-        setEndTime(formTime);
+        console.log(timeRef.current?.value, new Date(timeRef.current?.value));
+        setEndTime(new Date(timeRef.current?.value));
         setClockStarted(false);
       }}>
         <input
           type="datetime-local"
+          ref={timeRef}
           defaultValue={dateToInputWithTimezone(new Date())}
-          onChange={(e) => {
-            setFormTime(new Date(e.target.value));
-          }}
         />
         <input type="submit" value="Change time" />
-      </form> */}
+      </form>
     </div>
   );
 };

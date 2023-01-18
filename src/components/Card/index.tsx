@@ -4,14 +4,16 @@ import { CardBody, CardInfoText, CardTitle, InfoRowWrapper } from './styles';
 
 interface CardProps {
   card: Card;
-  column: number;
   canCardMove: boolean;
+  className: string;
+  column: number;
   onDoubleClick: (e: React.MouseEvent) => void;
+  onSingleClick: (e: React.MouseEvent) => void;
   row: number;
 }
 
 const CardComponent: React.FC<CardProps> = (props) => {
-  const { card, canCardMove, column, onDoubleClick, row } = props;
+  const { card, canCardMove, className, column, onDoubleClick, onSingleClick, row } = props;
 
   const [shaking, setShaking] = useState<boolean>(false);
 
@@ -20,12 +22,14 @@ const CardComponent: React.FC<CardProps> = (props) => {
       setShaking(true);
     }  else if (e.detail === 2) {
       onDoubleClick(e);
+    } else {
+      onSingleClick(e);
     }
   }
 
   return (
     <CardBody
-      className={`${shaking ? "shake" : ""} p-1`}
+      className={`${shaking ? "shake" : ""} p-1 ${className}`}
       column={column}
       onAnimationEnd={() => setShaking(false)}
       onClick={e => handleClick(e)}

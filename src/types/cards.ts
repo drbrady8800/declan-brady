@@ -5,7 +5,7 @@ export interface Card {
   text: "A" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "10" | "J" | "Q" | "K";
 }
 
-const suits = ["♣️", "♦️", "♥️", "♠️"];
+export const suits = ["♣️", "♦️", "♥️", "♠️"];
 const cardTexts = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 
 export const Deck: Array<Card> = suits.map((suit) => {
